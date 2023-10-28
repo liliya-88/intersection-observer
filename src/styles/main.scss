@@ -1,0 +1,904 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@300;400;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+/* vars */
+$primaryColor: #252b42;
+$secondaryColor: #d0a144;
+$tirtiaryColor: #295c7a;
+$tirtiaryColor2: #f6e4d7;
+
+$primary-100: rgb(37, 43, 66, 0.1);
+$primary-200: rgb(37, 43, 66, 0.2);
+$primary-300: rgb(37, 43, 66, 0.3);
+$primary-400: rgb(37, 43, 66, 0.4);
+$primary-500: rgb(37, 43, 66, 0.5);
+$primary-600: rgb(37, 43, 66, 0.6);
+$primary-700: rgb(37, 43, 66, 0.7);
+$primary-800: rgb(37, 43, 66, 0.8);
+$primary-900: rgb(37, 43, 66, 0.9);
+
+$secondary-100: rgb(208, 161, 68, 0.1);
+$secondary-200: rgb(208, 161, 68, 0.2);
+$secondary-300: rgb(208, 161, 68, 0.3);
+$secondary-400: rgb(208, 161, 68, 0.4);
+$secondary-500: rgb(208, 161, 68, 0.5);
+$secondary-600: rgb(208, 161, 68, 0.6);
+$secondary-700: rgb(208, 161, 68, 0.7);
+$secondary-800: rgb(208, 161, 68, 0.8);
+$secondary-900: rgb(208, 161, 68, 0.9);
+
+$whiteMain: #ffffff;
+$blackMain: #000000;
+
+$transition: all 0.3s linear;
+$margin-auto: 0 auto;
+
+/* filter */
+$filter-black: drop-shadow(0.8px 0.8px 1px $blackMain) invert(5%);
+$filter-white: drop-shadow(0.8px 0.8px 1px $whiteMain) invert(5%);
+$filter-with-light-redding: drop-shadow(0 0 0.05em rgb(255, 0, 0, 0.2));
+$filter-with-redding: drop-shadow(0 0 0.05em rgba(255, 0, 0, 0.5));
+/* end of filter */
+
+/* box-shadow */
+$boxShadowCard: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+$textShadowTitle: 0 1.7px 0 rgba(0, 0, 0, 0.4);
+$textShadowTitle2: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1.1px 0 rgba(0, 0, 0, 0.2);
+$boxShadowImage: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$boxShadowImage2: 0 3px 5px -1px rgba(54, 54, 54, 0.1),
+  0 2px 4px -1px rgba(54, 54, 54, 0.06);
+$boxShadowImage3: 0 4px 6px -1px rgba(156, 156, 156, 0.1),
+  0 2px 4px -1px rgba(108, 108, 108, 0.06);
+$boxShadow: 0 0 3px 5px black, 0.5px 0.5px 4px 6px grey;
+$boxShadowHover: 0 0 3px 5px grey, 0.5px 0.5px 4px 6px black;
+$textShadow: 2px 2px 10px rgb(255, 255, 255),
+  0px 0px 7px rgb(171, 119, 255, 0.6);
+$textShadow2: 2px 2px 10px rgb(255, 255, 255), 0px 0px 7px rgb(255, 0, 0, 0.6);
+$shadow-1: 0 1.5px 3px 0 rgba(0, 0, 0, 0.1), 0 1.5px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow-2: 0 4px 6px -1.5px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1.5px rgba(0, 0, 0, 0.06);
+$shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$shadow-logo: 2px -17px 5px #666666;
+
+/* fonts */
+$fontMain: "Roboto", sans-serif;
+$fontTitle: "Martel", serif;
+/* widths */
+$max-width: 100vw;
+$min-width: 300px;
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body {
+  max-width: $max-width;
+  min-width: $min-width;
+  color: $blackMain;
+  padding: 0;
+  font-size: 100%;
+  font-family: $fontMain;
+  overflow-x: hidden !important;
+  line-height: 1.75;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: $fontTitle;
+  font-weight: 400;
+  line-height: 1.3;
+  cursor: inherit !important;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+  text-shadow: $textShadowTitle;
+  font-family: $fontTitle;
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  cursor: inherit;
+}
+
+.img_80 {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  cursor: inherit;
+}
+
+.img_70 {
+  max-width: 70%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  cursor: inherit;
+}
+
+.img_50 {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  cursor: inherit;
+}
+
+.img_40 {
+  max-width: 40%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  cursor: inherit;
+}
+
+.img_30 {
+  max-width: 30%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  cursor: inherit;
+}
+
+.img_20 {
+  max-width: 20% !important;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  cursor: inherit;
+}
+
+.round_50 {
+  border-radius: 50%;
+}
+
+ul {
+  display: inline-block;
+  list-style: none;
+  cursor: inherit !important;
+}
+
+li {
+  text-decoration: none;
+  cursor: inherit !important;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: $blackMain;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+p {
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  text-overflow: ellipsis;
+  cursor: inherit !important;
+}
+main {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  color: $blackMain;
+}
+section {
+  width: 100%;
+  padding: 1rem 0 0;
+}
+
+article {
+  width: 100%;
+  padding: 1rem 0;
+  cursor: inherit !important;
+}
+
+form {
+  width: 100%;
+  cursor: inherit !important;
+}
+/* for text and p */
+.title_center {
+  text-align: center;
+  cursor: inherit !important;
+  filter: drop-shadow(0.8px 0.8px 1px $whiteMain) invert(5%);
+  font-family: $fontTitle;
+  margin-bottom: 2rem;
+  // margin-top: -2rem;
+}
+
+.title_center_light {
+  text-align: center;
+  cursor: inherit !important;
+  filter: drop-shadow(0.8px 0.8px 1px $whiteMain) invert(5%);
+  font-family: $fontTitle;
+  color: $whiteMain;
+  /*   margin-bottom: 2rem; */
+}
+
+.color {
+  color: $secondaryColor;
+  filter: drop-shadow(0.8px 0.8px 1px $whiteMain) invert(5%);
+}
+
+.color_light {
+  color: $primaryColor;
+  filter: $filter-white;
+}
+
+.text_dark {
+  color: $blackMain;
+  padding: 0.8rem;
+  text-overflow: ellipsis;
+  text-indent: 2rem;
+  text-align: justify;
+  word-wrap: break-word;
+  border-radius: 10%;
+  filter: $shadow-1;
+}
+
+.text_light {
+  color: $whiteMain;
+  padding: 0.8rem;
+  text-overflow: ellipsis;
+  text-indent: 2rem;
+  text-align: justify;
+  word-wrap: break-word;
+  border-radius: 10%;
+  filter: $shadow-1;
+}
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pt-2 {
+  padding-top: 2rem;
+}
+
+.pt-3 {
+  padding-top: 3rem;
+}
+
+.pt-4 {
+  padding-top: 4rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+.hr_light {
+  width: 50%;
+  margin: 0 auto;
+  border: 0.2px solid $whiteMain;
+}
+/* flash in effect */
+.flashIn {
+  animation: flashIn 0.65s forwards 1 cubic-bezier(0.47, 0, 0.745, 0.715)
+    alternate;
+}
+@keyframes flashIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* end of flesh in effect */
+/* buttons */
+.btn-hipster {
+  box-shadow: $shadow-1;
+  transition: $transition;
+  border-radius: 37px;
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  cursor: pointer;
+  font-size: 100%;
+  color: $whiteMain;
+  border: 2px outset $primaryColor;
+  background: $tirtiaryColor;
+  box-shadow: $boxShadowCard;
+}
+
+.btn-hipster:hover {
+  color: $secondaryColor;
+  border: 2px outset $secondaryColor;
+  background: transparent;
+  transform: scale(0.965);
+  text-shadow: $textShadowTitle2;
+}
+
+.btn-light {
+  box-shadow: $shadow-1;
+  transition: $transition;
+  border: rgba(0, 0, 0, 0);
+  border-radius: 37px;
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  cursor: pointer;
+  color: $whiteMain;
+  border: 2px outset $secondaryColor;
+  filter: $filter-black;
+  text-shadow: $textShadowTitle2;
+  background: $secondaryColor;
+  box-shadow: $boxShadowCard;
+}
+
+.btn-light:hover {
+  color: $secondaryColor;
+  border: 2px outset $secondaryColor;
+  background: transparent;
+  transform: scale(0.965);
+}
+
+.btn-dark {
+  box-shadow: $shadow-1;
+  transition: $transition;
+  border: rgba(0, 0, 0, 0);
+  border-radius: 37px;
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  cursor: pointer;
+  color: $tirtiaryColor2;
+  border: 2px outset $tirtiaryColor2;
+  text-shadow: $textShadowTitle2;
+  filter: $filter-black;
+  background: transparent;
+  box-shadow: $boxShadowCard;
+}
+
+.btn-dark:hover {
+  color: $tirtiaryColor2;
+  background: $primaryColor;
+  border: 2px outset $primaryColor;
+  transform: scale(0.965);
+}
+
+/* end of buttons */
+/* End of Global Styles */
+
+/* ||| NAV */
+nav {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: $whiteMain;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 0 $primaryColor;
+  transition: all 250ms ease-in-out;
+}
+nav p {
+  text-shadow: $textShadowTitle, 0 1px 3px $primaryColor;
+  font-size: 110%;
+  color: $whiteMain;
+}
+.ul_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // flex-direction: column;
+  gap: 1.5rem;
+}
+.ul_nav li {
+  font-size: 110%;
+  color: $whiteMain;
+  // margin-left: 2rem;
+}
+.ul_nav li a {
+  color: $whiteMain;
+  text-shadow: $textShadowTitle, 0 1px 3px $primaryColor;
+}
+/* ||| END OF NAV */
+/* section hero */
+.light {
+  color: $whiteMain;
+  text-shadow: $textShadowTitle;
+}
+.flex_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem 1rem;
+  margin: 0 auto 4rem;
+  height: auto;
+  flex: 0 0 100%;
+  max-width: 1170px;
+  padding-bottom: 1rem;
+  flex-direction: column;
+}
+.flex_1,
+.flex_2 {
+  max-width: 100%;
+  min-width: 300px;
+  height: auto;
+  border-radius: 15px;
+}
+.flex_2 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: transparent;
+  max-width: 75%;
+}
+.form_hero {
+  display: flex;
+  background-color: #ffffff;
+  width: 328px;
+  padding: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 328px;
+  margin: 0 auto;
+  box-shadow: $boxShadowCard;
+}
+.form_hero h5 {
+  font-weight: bold;
+  text-shadow: $textShadowTitle;
+}
+.form_hero label {
+  float: left !important;
+  text-align: left;
+  font-size: 90%;
+}
+.form_hero input {
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.form_hero select {
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.form_hero option {
+  width: 90%;
+  padding: 0.5rem !important;
+  border-radius: 10px;
+}
+:focus-visible {
+  background-color: $primary-500;
+  color: $whiteMain;
+  font-size: 102%;
+}
+:focus-within {
+  border: none;
+  outline: none;
+}
+.pr-1 {
+  padding-left: 1rem;
+}
+.btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    flex-direction: row;
+  }
+  .ul_nav {
+    flex-direction: row;
+  }
+  .flex_container {
+    flex-direction: row;
+  }
+  .flex_1,
+  .flex_2 {
+    width: 50%;
+    height: auto;
+  }
+  .form_hero {
+    width: 328px;
+    max-width: 328px;
+  }
+}
+/* end of section hero */
+/* ||| Section dark with cards */
+.wrapper_grid {
+  max-width: 1170px;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-flow: minmax(250px, auto);
+  height: auto;
+  margin: 4rem auto;
+  // padding: 0 1.5rem;
+  gap: 2rem 1.5rem;
+}
+.grid_item {
+  border-radius: 15px;
+}
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+.secondaryColor {
+  color: $secondaryColor;
+  text-shadow: $textShadowTitle2;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px groove $secondaryColor;
+}
+.secondaryColor:hover {
+  transform: translate(-100px);
+  background-color: $secondaryColor;
+  color: $tirtiaryColor2;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.tirtiary2 {
+  background-color: $tirtiaryColor2;
+  padding: 0.1px 0.3rem;
+  border-radius: 15px 15px 0 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bg_light {
+  background-color: $whiteMain;
+  padding: 0;
+}
+.bg_light ul {
+  padding: 0 0.5rem 1rem;
+}
+.img_15_inline {
+  width: 15%;
+  display: inline-block;
+  color: $secondaryColor !important;
+}
+@media screen and (min-width: 768px) {
+  .wrapper_grid {
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-auto-flow: minmax(300px, auto);
+  }
+}
+/* ||| End of Section dark with cards */
+
+/* ||| Reviews */
+.width-fit {
+  width: fit-content;
+}
+.img_review {
+  width: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0 1rem;
+}
+.tirtiary2_light {
+  background-color: $whiteMain;
+  padding: 0.1px 0.3rem;
+  border-radius: 15px 15px 0 0;
+  margin: 0 auto;
+  text-align: center;
+}
+/* ||| End of Reviews */
+
+/* ||| OUR TEAM */
+.img_team {
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  border-radius: 15px 15px 0 0;
+}
+.team_span {
+  border: 2px solid transparent;
+}
+.center {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+.team_icons_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 0.9rem;
+  margin: 0.5rem auto;
+}
+/* ||| END OF OUR TEAM */
+/* ||| Section Contact */
+.title_left {
+  text-align: left;
+  cursor: inherit !important;
+  filter: drop-shadow(0.8px 0.8px 1px $whiteMain) invert(5%);
+  font-family: $fontTitle;
+  margin-bottom: 0;
+  // margin-top: -2rem;
+}
+.flex_single {
+  max-width: 73vw;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+/* contact form */
+.form_contact_wrapper {
+  /*   max-width: 40vw; */
+  max-width: 100%;
+  padding: 0 0.2rem;
+  min-width: 300px;
+  float: left;
+  padding: 0 0.5rem;
+}
+.flex_inputs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 1rem;
+}
+.flex_inputs label {
+  color: $whiteMain;
+  font-size: 80%;
+  display: inline-block;
+}
+.flex_inputs input {
+  padding: 0.5rem;
+  border-radius: 10px;
+  max-width: 45vw;
+}
+.flex_inputs select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.flex_inputs option {
+  width: 100%;
+  padding: 0.5rem !important;
+  border-radius: 10px;
+}
+
+.textarea_container textarea {
+  color: $whiteMain;
+  font-size: 100%;
+  resize: vertical;
+  padding: 0.5rem;
+  border-radius: 10px;
+  max-width: 95vw;
+}
+.textarea_container label {
+  color: $whiteMain;
+
+  font-size: 80%;
+}
+.form_contact {
+  width:fit-content;
+ float: left;
+ margin-bottom: 4rem;
+ 
+}
+.upper_text {
+  text-transform: uppercase;
+  text-shadow: $textShadowTitle2;
+}
+@media screen and (min-width: 768px) {
+  .form_contact_wrapper {
+    max-width: 40vw;
+    width: 100%;
+    min-width: 300px;
+  }
+  .form_contact {
+    width: 40vw;
+  }
+  .textarea_container textarea {
+    width: 40%;
+  }
+  .flex_inputs input {
+    max-width: 100%;
+  }
+  .textarea_container textarea {
+    max-width: 80%;
+    min-width: 62%;
+  }
+}
+/* end of contact form */
+/* ||| End of Section Contact */
+
+/* ||| Footer */
+footer {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: $blackMain;
+  color: $whiteMain;
+  text-shadow: $shadow-1;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  height: auto;
+}
+.footer_wrapper {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0.8rem auto 0;
+  gap: 1rem 0.5rem;
+}
+.tirtiary2_footer {
+  color: $tirtiaryColor2;
+  padding: 0.1px 0.3rem;
+  border-radius: 15px 15px 0 0;
+  text-shadow: $textShadowTitle2;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: $tirtiaryColor2;
+  filter: $filter-with-redding;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 2;
+}
+.flex_icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem 1rem;
+}
+.link_style img {
+  transition: translateY 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  cursor: pointer;
+}
+.link_style img:hover {
+  // border-bottom: 1px $tirtiaryColor2 inset;
+  transform: translateY(-15%);
+  position: relative;
+}
+.link_style {
+  cursor: pointer;
+}
+.link_style ~ li,
+.link_style ~ a {
+  transition: translateX 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer !important;
+  line-height: 2;
+}
+.link_style + li,
+.link_style + span {
+  padding-top: 0.5rem;
+}
+.link_style ~ li:hover {
+  position: relative;
+  border-bottom: 0.3px $whiteMain inset;
+  border-width: fit-content;
+  transform: translateX(1%);
+  border-radius: 10%;
+  color: $tirtiaryColor;
+}
+.link_style ~ a:hover {
+  position: relative;
+  text-shadow: $textShadowTitle2;
+  filter: $filter-with-light-redding;
+  border-bottom: 0.3px $whiteMain inset;
+  border-width: fit-content;
+  color: $tirtiaryColor;
+  transform: translateX(1%);
+}
+.bg_tirtiary {
+  background-color: $tirtiaryColor;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto auto;
+}
+.hr_light_100 {
+  margin-bottom: 0.9rem;
+  width: 70%;
+  margin: 0 auto;
+  border: 0.2px solid $whiteMain;
+}
+.input_subscribe {
+  padding: 1.2rem 1rem 1rem;
+  border-radius: 35px 0 0 35px;
+  width: fit-content;
+}
+@media screen and (max-width: 348px) {
+  .input_subscribe {
+    width: 57vw;
+  }
+}
+
+.button_subscribe {
+  border-radius: 0 35px 35px 0;
+  background-color: $secondaryColor;
+  width: fit-content;
+  font-size: 110%;
+  line-height: 2;
+  position: relative;
+  color: $blackMain;
+  padding: 0.6rem;
+  text-align: center;
+  display: inline-block;
+  height: 100%;
+  border: 35px;
+  z-index: 3;
+  transition: $transition;
+}
+.button_subscribe:hover {
+  background-color: $tirtiaryColor;
+  color: $whiteMain;
+  cursor: pointer;
+}
+/* @media screen and (min-width: 768px) {
+} */
+/* ||| End of Footer */

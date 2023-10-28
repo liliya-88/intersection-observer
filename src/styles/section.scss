@@ -1,0 +1,112 @@
+.section_light {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 4rem;
+  margin: 0 auto;
+  background-blend-mode: overlay;
+  // background: url("../../img/businessman.jpg") center/cover no-repeat fixed;
+  background: linear-gradient(to bottom, $tirtiaryColor, $primaryColor)
+    center/cover no-repeat fixed;
+}
+.section_light2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 8rem;
+  margin: 0 auto;
+  background-blend-mode: overlay;
+  // background: url("../../img/businessman.jpg") center/cover no-repeat fixed;
+  background: linear-gradient(to bottom, $primaryColor, $tirtiaryColor)
+    center/cover no-repeat fixed;
+}
+.section_light3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 8rem;
+  margin: 0 auto;
+  background-blend-mode: overlay;
+  // background: url("../../img/businessman.jpg") center/cover no-repeat fixed;
+  background: linear-gradient(to bottom, $tirtiaryColor, $whiteMain)
+    center/cover no-repeat fixed;
+}
+
+.section_dark {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 8rem;
+  margin: 0 auto;
+  background-blend-mode: overlay;
+  background: url("../../img/businessman.jpg") center/cover no-repeat;
+}
+
+.overlay_light {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  z-index: 6;
+}
+
+.overlay_light::after {
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: relative;
+  position: absolute;
+  z-index: 7;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.5);
+  /* filter: drop-shadow(0.8px 0.8px 1px rgb(0, 0, 0)) invert(5%); */
+  margin: 0 auto;
+}
+
+.overlay_dark {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 6;
+}
+
+.overlay_dark::after {
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: relative;
+  position: absolute;
+  z-index: 7;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+
+.zindex_8 {
+  z-index: 8;
+  width: 100vw;
+  overflow: hidden;
+}
+.bg_contact {
+  background: url("../../img/bg-contact.png") center/cover no-repeat fixed;
+  background-blend-mode: overlay;
+}
