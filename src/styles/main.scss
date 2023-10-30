@@ -887,7 +887,7 @@ footer {
   background-color: $blackMain;
   color: $whiteMain;
   text-shadow: $shadow-1;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem 0;
   text-align: center;
   height: auto;
 }
@@ -1011,3 +1011,45 @@ footer {
 /* @media screen and (min-width: 768px) {
 } */
 /* ||| End of Footer */
+/* ||| ARROW SVG */
+.arrow_container {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 1.9vw;
+  bottom: 6vh;
+  margin-left: auto;
+  width: 35px;
+  height: auto;
+  background-color: rgba(17, 17, 17, 0.3);
+  background-color: rgba(2, 30, 46, 0.1);
+  border-radius: 10px;
+  z-index: 50;
+}
+@media screen and (min-width: 768px) {
+  .arrow_container {
+   right: 1.1vw;
+  }
+}
+.arrow_svg {
+  color: rgb(208, 161, 68, 0.9);
+  box-shadow: $boxShadowImage;
+  z-index: 1;
+  filter: $filter-black;
+  max-width: 100%;
+  height: auto;
+  transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+.arrow_svg:hover {
+  box-shadow: $boxShadowImage2;
+  border-radius: 10px;
+  background-color: rgba(2, 30, 46, 0.5);
+  color: rgb(208, 161, 68, 0.7);
+  cursor: pointer;
+}
+.arrow_container.show {
+  display: flex;
+}
+/* ||| END OF ARROW SVG */

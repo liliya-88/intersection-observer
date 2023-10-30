@@ -143,6 +143,13 @@ function init() {
 
 init();
 
+/* ||| date handler */
+const dateInFooter = document.querySelector("#date");
+const year = new Date().getFullYear();
+dateInFooter.innerHTML = year;
+console.log(year);
+/* ||| end of date handler */
+
 /* ||| HANDLE NAVBAR */
 const navBtn = document.querySelector("#menu-btn");
 const nav = document.querySelector("nav");
@@ -180,6 +187,24 @@ closeLink();
 /* ||| END OF HANDLE NAVBAR */
 
 /* ||| INTERSECTION OBSERVERS */
+const navObs = new IntersectionObserver((entries) =>
+  nav.classList.toggle("active", !entries[0].isIntersecting, {
+    threshold: 0.85,
+  })
+);
+navObs.observe(document.querySelector("header"));
+
+const arrow = document.querySelector(".arrow_container");
+
+const arrowSvg = new IntersectionObserver((entries) =>
+  arrow.classList.toggle("show", !entries[0].isIntersecting, {
+    threshold: 0.05,
+  })
+);
+console.log(arrowSvg, "arrowSvg");
+console.log(navObs, "navObs");
+
+arrowSvg.observe(document.querySelector("header"));
 /* ||| END OF INTERSECTION OBSERVERS */
 
 /* --------------------START POINT FOR THIS PROJECT-----------------*/
