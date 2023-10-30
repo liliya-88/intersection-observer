@@ -7,24 +7,39 @@
   <title>Consty</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+<!--  <button class="btn btn--menu" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Open mobile nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+        </svg>
+      </button> -->
 
 <body class="flashIn">
   <header>
     <nav>
-      <a href="/">
+      <a href="/" aria-label="Go to homepage">
         <p>Consty</p>
       </a>
-      <ul class="ul_nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="#product">Product</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
+      <div class="ul_links_wrapper">
+        <button class="bars" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Open mobile nav">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+        <ul class="ul_nav" role="menubar">
+          <li role="none"><a href="#home" role="menuitem">Home</a></li>
+          <li role="none"><a href="#practice" role="menuitem">Practice Advice</a></li>
+          <li role="none"><a href="#about" role="menuitem">About</a></li>
+          <li role="none"><a href="#attorney" role="menuitem">Our Attorneys</a></li>
+          <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+        </ul>
+      </div>
+
     </nav>
   </header>
-  <main>
-    <section class="section_dark overlay_dark">
+  <main id="home">
+    <section class="section_dark overlay_dark" >
       <div class="zindex_8">
         <article class="flex_container">
           <div class="flex_1">
@@ -80,7 +95,7 @@
       </div>
     </section>
     <!-- section with cards dark -->
-    <section class="section_light overlay_dark">
+    <section class="section_light overlay_dark" id="practice">
       <div class="zindex_8">
         <div class="title_center">
           <h2 class="light">Practice Advice</h2>
@@ -151,7 +166,7 @@
       </div>
     </section>
     <!-- section who we are -->
-    <section class="section_light2 overlay_dark">
+    <section class="section_light2 overlay_dark" id="about">
       <div class="zindex_8">
         <div class="title_center">
           <h2 class="light">Who we are</h2>
@@ -300,7 +315,7 @@
       </div>
     </section>
     <!-- section our team -->
-    <section class="section_light3 overlay_dark">
+    <section class="section_light3 overlay_dark" id="attorney">
       <div class="zindex_8">
         <div class="title_center">
           <h2 class="light">Meet Our Attorneys</h2>
@@ -362,43 +377,44 @@
       </div>
     </section>
     <!-- section contact -->
-    <section class="section_light2 bg_contact">
-       <div class="zindex_8">
+    <section class="section_light2 bg_contact" id="contact">
+      <div class="zindex_8">
         <div class="flex_single">
           <div class="title_left">
-            <h3 class="light"><small class="text_light">Contact Us</small><br/>Make an Appointment</h3>
+            <h3 class="light"><small class="text_light">Contact Us</small><br />Make an Appointment</h3>
           </div>
           <div class="form_contact_wrapper">
             <form action="#" class="form_contact">
               <div class="flex_inputs">
                 <div>
-                  <label for="name_contact">Name<strong>*</strong>:<br/>
-                  <input type="text" name="name_contact" max="10" placeholder="Lucy">
+                  <label for="name_contact">Name<strong>*</strong>:<br />
+                    <input type="text" name="name_contact" max="10" placeholder="Lucy">
                   </label><br>
-                 <label for="name_contact">Date<strong>*</strong>:<br/>
-                  <input type="date" placeholder="Lucy">
+                  <label for="name_contact">Date<strong>*</strong>:<br />
+                    <input type="date" placeholder="Lucy">
                   </label>
                 </div>
                 <div>
                   <label for="email_contact">Email<strong>*</strong>:<br />
                     <input type="email" name="email_contact" placeholder="example@gmail.com" />
                   </label><br>
-                   <label for="name_contact">Date<strong>*</strong><br/>
-                
-                 <select name="time" id="time">
-                  <option value="">Select time</option>
-                  <option value="">11:00</option>
-                  <option value="">13:00</option>
-                  <option value="">15:00</option>
-                  <option value="">16:00</option>
-                 </select>  </label>
+                  <label for="name_contact">Date<strong>*</strong><br />
+
+                    <select name="time" id="time">
+                      <option value="">Select time</option>
+                      <option value="">11:00</option>
+                      <option value="">13:00</option>
+                      <option value="">15:00</option>
+                      <option value="">16:00</option>
+                    </select> </label>
                 </div>
               </div>
               <div class="textarea_container">
-                <label for="comment">Comment: <br/><textarea name="comment" id="comment" cols="53" rows="10" ></textarea></label>
+                <label for="comment">Comment: <br /><textarea name="comment" id="comment" cols="53"
+                    rows="10"></textarea></label>
               </div>
               <br>
-               <div>
+              <div>
                 <button type="submit" class="btn-light upper_text">
                   Book appointment
                 </button>

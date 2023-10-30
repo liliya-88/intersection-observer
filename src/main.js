@@ -143,7 +143,43 @@ function init() {
 
 init();
 
-// const component = MainComponent("Hello there");
+/* ||| HANDLE NAVBAR */
+const navBtn = document.querySelector("#menu-btn");
+const nav = document.querySelector("nav");
+const navLinks = document.querySelector(".ul_nav");
+const navLink = document.querySelectorAll(".ul_nav li a");
 
-// document.querySelector("body").appendChild(component);
+function handleNavBtn() {
+  navBtn.addEventListener("click", () => {
+    navLinks.classList.add("activated");
+    const isExpanded = JSON.parse(navBtn.getAttribute("aria-expanded"));
+    // console.log(isExpanded, "isExpanded");
+    navBtn.setAttribute("aria-expanded", !isExpanded);
+    !isExpanded && nav.classList.add("active");
+    closeLink();
+  });
+}
+
+handleNavBtn();
+
+function closeLink() {
+  navLink.forEach((a) => {
+    a.addEventListener("click", () => {
+      const isExpanded = JSON.parse(navBtn.getAttribute("aria-expanded"));
+      if (!isExpanded) {
+        return;
+      } else {
+        navBtn.setAttribute("aria-expanded", !isExpanded);
+        !isExpanded && nav.classList.add("active");
+      }
+    });
+  });
+}
+
+closeLink();
+/* ||| END OF HANDLE NAVBAR */
+
+/* ||| INTERSECTION OBSERVERS */
+/* ||| END OF INTERSECTION OBSERVERS */
+
 /* --------------------START POINT FOR THIS PROJECT-----------------*/
