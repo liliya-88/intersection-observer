@@ -31,12 +31,18 @@
 
     </nav>
   </header>
-  <main >
+  <!--  id={done ? "message_before_loading_hide" : "message_before_loading"} -->
+     <div class="message_before_loading">
+          <div className="preloader">
+            <div className="loading-dot"></div>
+          </div>
+        </div>
+  <main>
     <section class="section_dark overlay_dark observed" id="home">
       <div class="zindex_8">
-        <article class="flex_container">
+        <article class="flex_container fade-up">
           <div class="flex_1">
-            <div class="title_center">
+            <div class="title_center fade-up">
               <br />
               <h1 class="light">LEGAL PRO SERVICES</h1>
               <br />
@@ -50,7 +56,7 @@
               <a href="#practice" class="btn-dark">Learn more</a>
             </div>
           </div>
-          <div class="flex_2">
+          <div class="flex_2 fade-up">
             <form action="#" class="form_hero">
               <h5>Book Appointment</h5>
               <div>
@@ -90,14 +96,14 @@
     <!-- section with cards dark -->
     <section class="section_light overlay_dark observed" id="practice">
       <div class="zindex_8">
-        <div class="title_center">
+        <div class="title_center fade-up">
           <h2 class="light">Practice Advice</h2>
           <p class="text_light center">
             Problems trying to resolve the conflict between the two major
             realms of Classical physics: Newtonian mechanics.
           </p>
         </div>
-        <div class="wrapper_grid">
+        <div class="wrapper_grid fade-up">
           <article class="grid_item bg_light">
             <div class="text_center tirtiary2">
               <h5>
@@ -114,7 +120,7 @@
               <li>— Lightning fast prototyping</li>
               <li>— Fastest way to organize</li>
               <li>— Work at the speed of thought.</li>
-              <li><a href="#" class="secondaryColor">Learn More</a></li>
+              <li><a href="#about" class="secondaryColor">Learn More</a></li>
             </ul>
           </article>
           <article class="grid_item bg_light">
@@ -161,14 +167,14 @@
     <!-- section who we are -->
     <section class="section_light2 overlay_dark observed" id="about">
       <div class="zindex_8">
-        <div class="title_center">
+        <div class="title_center fade-up">
           <h2 class="light">Who we are</h2>
           <p class="text_light center">
             Problems trying to resolve the conflict between the two major
             realms of Classical physics: Newtonian mechanics.
           </p>
         </div>
-        <div class="grid_center">
+        <div class="grid_center fade-up">
           <div class="video_container" id="video-center">
             <video id="video" poster="../img/bg-cover.jpg" style="
                   min-width: 300px;
@@ -188,14 +194,14 @@
     <!-- section reviews -->
     <section class="section_light2 overlay_dark observed">
       <div class="zindex_8">
-        <div class="title_center">
+        <div class="title_center fade-up">
           <h2 class="light">What Clients Say</h2>
           <p class="text_light center">
             Problems trying to resolve the conflict between the two major
             realms of Classical physics: Newtonian mechanics.
           </p>
         </div>
-        <div class="wrapper_grid">
+        <div class="wrapper_grid fade-up">
           <article class="grid_item bg_light">
             <div class="text_center tirtiary2_light">
               <span><svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none">
@@ -310,14 +316,14 @@
     <!-- section our team -->
     <section class="section_light3 overlay_dark observed" id="attorney">
       <div class="zindex_8">
-        <div class="title_center">
+        <div class="title_center fade-up">
           <h2 class="light">Meet Our Attorneys</h2>
           <p class="text_light center">
             Problems trying to resolve the conflict between
             the two major realms of Classical physics: Newtonian mechanics.
           </p>
         </div>
-        <div class="wrapper_grid">
+        <div class="wrapper_grid fade-up">
           <article class="grid_item bg_light">
             <div class="text_center tirtiary2_light">
               <span id="attorney1" class="team_span"><img src="" alt=""></span>
@@ -373,7 +379,7 @@
     <section class="section_light2 bg_contact observed" id="contact">
       <div class="zindex_8">
         <div class="flex_single">
-          <div class="title_left">
+          <div class="title_left fade-up">
             <h3 class="light"><small class="text_light">Contact Us</small><br />Make an Appointment</h3>
           </div>
           <div class="form_contact_wrapper">

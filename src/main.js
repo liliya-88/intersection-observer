@@ -15,6 +15,16 @@ import teamFacebook from "../img/team-fb.png";
 import teamInstagram from "../img/team-ins.png";
 import teamTwitter from "../img/team-tw.png";
 
+/* preloader */
+const preloader = document.querySelector(".message_before_loading");
+if (preloader) {
+  window.addEventListener("load", () => {
+    preloader.classList.add("message_before_loading_hide");
+    window.scroll(0, 0);
+  });
+}
+/* end of preloader */
+
 function init() {
   const div = document.getElementById("video");
   div.setAttribute("controls", "true");
@@ -268,6 +278,26 @@ document.querySelectorAll(".observed").forEach((el) => {
   navItemLinks.observe(el);
 });
 /* end of for sections and active link syncronization */
+
+/* fade up sections and elements */
+const fadeUpObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("faded");
+        fadeUpObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    rootMargin: "-15%",
+  }
+);
+
+document.querySelectorAll(".fade-up").forEach((el) => {
+  fadeUpObserver.observe(el);
+});
+/* end of fade up sections and elements */
 /* ||| END OF INTERSECTION OBSERVERS */
 
 /* --------------------START POINT FOR THIS PROJECT-----------------*/
