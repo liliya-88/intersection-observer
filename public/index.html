@@ -7,7 +7,16 @@
   <title>Consty</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="flashIn">
+  <!-- preloader -->
+
+  <div  class="message_before_loading">
+    <div class="preloader">
+      <div class="loading-dot"></div>
+    </div>
+  </div>
+<!-- end of preloader -->
   <header>
     <nav>
       <a href="/" aria-label="Go to homepage">
@@ -31,12 +40,7 @@
 
     </nav>
   </header>
-  <!--  id={done ? "message_before_loading_hide" : "message_before_loading"} -->
-     <div class="message_before_loading">
-          <div className="preloader">
-            <div className="loading-dot"></div>
-          </div>
-        </div>
+
   <main>
     <section class="section_dark overlay_dark observed" id="home">
       <div class="zindex_8">
@@ -478,12 +482,13 @@
   <!-- arrow -->
   <a href="#home">
     <div class="arrow_container">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 arrow_svg">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-    </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4 arrow_svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+      </svg>
     </div>
   </a>
-    <!-- end of arrow -->
+  <!-- end of arrow -->
 
   <script src="./bundle.js"></script>
 </body>

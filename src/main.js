@@ -17,12 +17,13 @@ import teamTwitter from "../img/team-tw.png";
 
 /* preloader */
 const preloader = document.querySelector(".message_before_loading");
+
 if (preloader) {
   window.addEventListener("load", () => {
     preloader.classList.add("message_before_loading_hide");
     window.scroll(0, 0);
   });
-}
+} 
 /* end of preloader */
 
 function init() {
