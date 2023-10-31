@@ -17,7 +17,8 @@
 /build/
 /dist/
 /out/
-/public/
+/src/
+img/
 
 # Ignore system-specific files
 .DS_Store
