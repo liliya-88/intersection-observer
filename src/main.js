@@ -147,7 +147,6 @@ init();
 const dateInFooter = document.querySelector("#date");
 const year = new Date().getFullYear();
 dateInFooter.innerHTML = year;
-console.log(year);
 /* ||| end of date handler */
 
 /* ||| HANDLE NAVBAR */
@@ -160,7 +159,6 @@ function handleNavBtn() {
   navBtn.addEventListener("click", () => {
     navLinks.classList.add("activated");
     const isExpanded = JSON.parse(navBtn.getAttribute("aria-expanded"));
-    // console.log(isExpanded, "isExpanded");
     navBtn.setAttribute("aria-expanded", !isExpanded);
     !isExpanded && nav.classList.add("active");
     closeLink();
@@ -182,8 +180,32 @@ function closeLink() {
     });
   });
 }
-
 closeLink();
+/* end of close nav mobile when a is clicked */
+
+/* add active style to the clicked a */
+const quantity = navLink.length;
+
+function hideLinkActive() {
+  navLink.forEach((a) => {
+    a.className = "";
+  });
+}
+if (navLink) {
+  hideLinkActive();
+
+  for (let i = 0; i < quantity; i++) {
+    navLink[i].addEventListener("click", (evt) => {
+      let thisLink = evt.currentTarget;
+      if (thisLink) {
+        hideLinkActive();
+        thisLink.className = "active";
+      }
+    });
+  }
+}
+
+/* end of add active style to the clicked a */
 /* ||| END OF HANDLE NAVBAR */
 
 /* ||| INTERSECTION OBSERVERS */
@@ -192,19 +214,60 @@ const navObs = new IntersectionObserver((entries) =>
     threshold: 0.85,
   })
 );
+
 navObs.observe(document.querySelector("header"));
 
+/* Arrow intersection observer */
 const arrow = document.querySelector(".arrow_container");
 
 const arrowSvg = new IntersectionObserver((entries) =>
   arrow.classList.toggle("show", !entries[0].isIntersecting, {
-    threshold: 0.05,
+    threshold: 0.85,
   })
 );
-console.log(arrowSvg, "arrowSvg");
-console.log(navObs, "navObs");
 
-arrowSvg.observe(document.querySelector("header"));
+arrowSvg.observe(document.querySelector("article"));
+
+/* for sections and active link syncronization */
+const navItemLinks = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      // console.log(entry, "entry");
+
+      if (entry.isIntersecting) {
+        // hideLinkActive();
+        if (entry.target.id === "home") {
+          hideLinkActive();
+          navLink[0].className = "active";
+        }
+        if (entry.target.id === "practice") {
+          hideLinkActive();
+          navLink[1].className = "active";
+        }
+        if (entry.target.id === "about") {
+          hideLinkActive();
+          navLink[2].className = "active";
+        }
+        if (entry.target.id === "attorney") {
+          hideLinkActive();
+          navLink[3].className = "active";
+        }
+        if (entry.target.id === "contact") {
+          hideLinkActive();
+          navLink[4].className = "active";
+        }
+      }
+    });
+  },
+  {
+    rootMargin: "-10%",
+  }
+);
+
+document.querySelectorAll(".observed").forEach((el) => {
+  navItemLinks.observe(el);
+});
+/* end of for sections and active link syncronization */
 /* ||| END OF INTERSECTION OBSERVERS */
 
 /* --------------------START POINT FOR THIS PROJECT-----------------*/
